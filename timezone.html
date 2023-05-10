@@ -1,0 +1,28 @@
+<p class="">
+						The virtual conference will be run from 8:00am to 11:30pm (PST)( )<span class="utcToLocal">2020-11-03T16:00:00.0Z</span> to <span class="utcToLocal2">2020-11-03T19:30:00.0Z</span>), November 3, 2020.
+					</p>
+
+<script type="text/javascript">
+document.querySelectorAll(".utcToLocal").forEach(
+  function (i) {
+    const options = {hour12: 'true', hour:'2-digit', minute:'2-digit'};
+	var zone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2];
+	if(zone!="PST"&&zone!="PDT"){
+		i.innerText = "Your local time: "+(new Date(i.innerText).toLocaleString("en-US",options));
+	}else{
+		i.innerText = "";
+	}
+  }
+);
+document.querySelectorAll(".utcToLocal2").forEach(
+  function (i) {
+    const options = {hour12: 'true', hour:'2-digit', minute:'2-digit', timeZoneName: 'short'};
+	var zone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2];
+	if(zone!="PST"&&zone!="PDT"){
+		i.innerText = ""+(new Date(i.innerText).toLocaleString("en-US",options))+"";
+	}else{
+		i.innerText = "";
+	}
+  }
+);
+</script>
